@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{033241BE-6205-4B76-B0FE-9FD9A671A9EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PhoneConversation</RootNamespace>
+    <AssemblyName>PhoneConversation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Call.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Call.Designer.cs">
+      <DependentUpon>Call.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calling.Designer.cs">
+      <DependentUpon>Calling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactEdit.Designer.cs">
+      <DependentUpon>ContactEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operators.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operators.Designer.cs">
+      <DependentUpon>Operators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperatorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperatorEdit.Designer.cs">
+      <DependentUpon>OperatorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Replenishments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Replenishments.Designer.cs">
+      <DependentUpon>Replenishments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TariffEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TariffEdit.Designer.cs">
+      <DependentUpon>TariffEdit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Call.resx">
+      <DependentUpon>Call.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calling.resx">
+      <DependentUpon>Calling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactEdit.resx">
+      <DependentUpon>ContactEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operators.resx">
+      <DependentUpon>Operators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperatorEdit.resx">
+      <DependentUpon>OperatorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Replenishments.resx">
+      <DependentUpon>Replenishments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TariffEdit.resx">
+      <DependentUpon>TariffEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\OperatorRepository.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PhoneConversationMain\PhoneConversation.Data.csproj">
+      <Project>{a55e1013-4efb-46e0-919d-4eb1477ce48a}</Project>
+      <Name>PhoneConversation.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Objects\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PhoneConversation.Base&lt;T&gt;" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhoneConversation.Block" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAIEAAgAAAAIAAAAAAAAAAAABAAAABA=</HashCode>
+      <FileName>Block.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PhoneConversation.Call" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAACEAAAgAAAAMAAAABAAAgAAAAAAAAA=</HashCode>
+      <FileName>Call.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhoneConversation.Client" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="PhoneConversation.Person" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="2.562" />
+        <Point X="6.25" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Replenishment" Type="PhoneConversation.Replenishment">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.239" Y="0.122" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Operator" Type="PhoneConversation.Operator" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.438" Y="3.5" />
+        <Point X="5.438" Y="3.078" />
+        <Point X="4.281" Y="3.078" />
+        <Point X="4.281" Y="2.441" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAGyAQIQAAAAAAEAAgQBACIEABAAAAEUAAAAEAAJhQ=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Replenishment" />
+      <Property Name="Block" />
+      <Property Name="Operator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PhoneConversation.Operator" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <AssociationLine Name="Client" Type="PhoneConversation.Client" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.547" Y="2.441" />
+        <Point X="4.547" Y="2.877" />
+        <Point X="5.75" Y="2.877" />
+        <Point X="5.75" Y="3.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.084" Y="0.11" Height="0.182" Width="0.741" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACQABAAAQAAAAEACAABAQoAAAECAAAAAADAQACAhQ=</HashCode>
+      <FileName>Operator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Tariff" />
+      <Property Name="Client" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PhoneConversation.Person" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhoneConversation.Replenishment" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAEAAAAAAAAAAAAAAAACAAAIAAAABQ=</HashCode>
+      <FileName>Replenishment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PhoneConversation.Tariff" Collapsed="true">
+    <Position X="1" Y="2" Width="1.5" />
+    <InheritanceLine Type="PhoneConversation.Base&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="1.062" />
+        <Point X="3.75" Y="1.295" />
+        <Point X="1.312" Y="1.295" />
+        <Point X="1.312" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAgEAAAIAAAIAAAAIBA=</HashCode>
+      <FileName>Tariff.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PhoneConversation.TariffRepository" Collapsed="true">
+    <Position X="3.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAEAAAAAAAAAAAAAAAACAAAAAAAAAIAAAA=</HashCode>
+      <FileName>TariffRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhoneConversation.ClientRepository" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClientRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhoneConversation.SerealizeJson" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SerealizeJson.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PhoneConversation.SerealizeTxt" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SerealizeTxt.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PhoneConversation.SerealizeXml" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAEAAAAAAAAAAAAAAAAAAAAgEAAAAAAAA=</HashCode>
+      <FileName>SerealizeXml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="PhoneConversation.ISerealize" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISerealize.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
